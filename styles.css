@@ -1,0 +1,467 @@
+/* Hide the text answer. */
+body#page-local-qrsub-attempt .que.hybrid div.qtype_hybrid_builtin_answers .answer,
+
+/* Hide the activity navigation block below the question. */
+body#page-local-qrsub-attempt div.activity-navigation,
+
+/* Hide the block region in the question. */
+body#page-local-qrsub-attempt section[data-region="blocks-column"],
+
+/* Hide the question info box so we don't have to mess with the question engine renderer. */
+body#page-local-qrsub-attempt div.info {
+    display: none;
+}
+
+/* Remove the margin-right that was holding the space for question info box. */
+body#page-local-qrsub-attempt .que .content {
+    margin: 0;
+}
+
+/* Restore the float right on the next button that was added on #page-mod-quiz-attempt */
+body#page-local-qrsub-attempt .submitbtns .mod_quiz-next-nav {
+    float: right;
+}
+
+/*************************/
+/*   Customize display   */
+/*************************/
+body#page-mod-quiz-view figure {
+    text-align: center;
+    width: 100%;
+}
+
+body#page-local-qrsub-attempt .que.hybrid .formulation {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Show the attachment in the QRSub attempt page. */
+body#page-local-qrsub-attempt .que.hybrid div.qtype_hybrid_attachments {
+    display: block;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders {
+    border-top: 1px solid #666;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders span {
+    display: flex;
+    align-items: center;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .js-required-files {
+    color: red;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .js-required-files.is-complete {
+    color: green;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .js-maximum-files {
+    opacity: 0.6;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .js-maximum-files.is-complete {
+    opacity: 1;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .qtype_hybrid_placeholder {
+    border: 1px dashed #666;
+    position: relative;
+    margin: 10px;
+    text-align: center;
+    width: calc(100% - 20px);
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .qtype_hybrid_placeholder:hover {
+    cursor: pointer;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .qtype_hybrid_placeholder:before {
+    top: 0;
+    content: '';
+    float: left;
+    padding-top: 100%;
+    bottom: 0;
+}
+
+/* Make the "add new file" tutton text white so it looks better on Concordia's Moodle. */
+body#page-local-qrsub-attempt a.js-add-file {
+    color: #fff;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .qtype_hybrid_placeholder.js-add-file:after {
+    position: absolute;
+    content: 'Upload file';
+    font-size: 18px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .qtype_hybrid_placeholder.js-add-file .icon {
+    position: absolute;
+    font-size: 56px;
+    width: 56px;
+    height: 56px;
+    top: calc(50% - 28px);
+    left: calc(50% - 28px);
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .qtype_hybrid_placeholder img {
+    max-height: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    margin: auto;
+    padding: 0;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    top: 10px;
+    width: auto;
+}
+
+.que.hybrid .qtype_hybrid_attachments_placeholders .qtype_hybrid_placeholder.is-required {
+    border-color: #ff0606;
+}
+
+.que.hybrid .qtype_hybrid_builtin_answers .filemanager {
+    display: none;
+}
+
+.que.hybrid .qtype_hybrid_builtin_answers .card,
+.que.hybrid .qtype_hybrid_builtin_answers .filepicker-filelist,
+.que.hybrid .qtype_hybrid_builtin_answers .filemanager-container {
+    background: none;
+    border: none;
+}
+
+.que.hybrid .qtype_hybrid_builtin_answers .filemanager-container {
+    background: #fff;
+}
+
+.que.hybrid .qtype_hybrid_builtin_answers .filemanager-toolbar {
+    padding: 0;
+}
+
+.que.hybrid .qtype_hybrid_builtin_answers .filepicker-filelist .filepicker-container,
+.que.hybrid .qtype_hybrid_builtin_answers .filemanager.fm-noitems .fm-empty-container {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.que.hybrid .qtype_hybrid_builtin_answers .fp-viewbar,
+.que.hybrid .qtype_hybrid_builtin_answers .fp-pathbar,
+.que.hybrid .qtype_hybrid_builtin_answers .fp-btn-download,
+.que.hybrid .qtype_hybrid_builtin_answers .fp-restrictions {
+    display: none;
+}
+
+.que.hybrid .filemanager .fp-content {
+    max-height: inherit;
+    overflow: visible;
+}
+
+/*******************************/
+/*   File Manager view icones  */
+/*******************************/
+.fp-iconview .fp-file {
+    width: calc(50% - 20px);
+}
+
+.fp-iconview .fp-thumbnail {
+    width: 100% !important;
+    height: auto !important;
+    border: none !important;
+}
+
+.fp-content .fp-iconview .fp-thumbnail img {
+    padding: 0;
+    max-width: inherit !important;
+    max-height: inherit !important;
+    width: 100%;
+    height: auto;
+    border: 1px dashed #ddd;
+}
+
+.fp-content .fp-iconview .fp-filename-field,
+.fp-content .fp-iconview .fp-filename-field .fp-filename {
+    width: 100% !important;
+}
+
+/*******************/
+/*   Upload Modal  */
+/*******************/
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-repo-area {
+    background: none;
+    padding: 0 !important;
+}
+
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-repo-area .fp-repo a {
+    margin: 0;
+}
+
+/* Hide unwanted options in Upload modal */
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-repo:nth-child(1n),
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-repo:nth-child(2n),
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-repo:nth-child(3n),
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-repo:nth-child(5n),
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-repo:nth-child(6n),
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-navbar,
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-saveas,
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-setauthor,
+body#page-local-qrsub-attempt .moodle-dialogue.filepicker .file-picker .fp-setlicense,
+body#page-local-qrsub-attempt .moodle-dialogue .file-picker .fp-login-form,
+body#page-local-qrsub-attempt .moodle-dialogue .file-picker .fp-content-error {
+    display: none;
+}
+
+body#page-local-qrsub-attempt ue.filepicker .file-picker .fp-repo:nth-child(4n) {
+    display: block;
+}
+
+body#page-local-qrsub-attempt .filepicker .file-picker .fp-content {
+    height: auto;
+    border: none;
+}
+
+/*******************/
+/**   File exist  **/
+/*******************/
+body#page-local-qrsub-attempt .fp-dlg .fp-dlg-butoverwrite {
+    display: none !important;
+}
+
+
+/*******************/
+/**   Edit Modal  **/
+/*******************/
+body#page-local-qrsub-attempt .moodle-dialogue .fp-select .fp-author,
+body#page-local-qrsub-attempt .moodle-dialogue .fp-select .fp-license,
+body#page-local-qrsub-attempt .moodle-dialogue .fp-select .fp-path {
+    display: none;
+}
+
+/*******************************/
+/**   Review question pop-up  **/
+/*******************************/
+#upload_exam_files {
+    margin-top: 20px;
+}
+
+/********************************/
+/****   Modal to grade files ****/
+/********************************/
+.modal-lg {
+    max-width: 90% !important;
+}
+
+.img-size {
+    background-size: cover;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+}
+
+.modal-content {
+    border: none;
+    width: 700px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.carousel-control-prev .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    height: 48px;
+    width: 30px;
+}
+
+.carousel-control-next .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    height: 48px;
+    width: 30px;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/********************************/
+/**   Question desc on mobile  **/
+/********************************/
+
+/* QRMOOD-46 - As a student, I want clearer question when I upload my files. */
+
+/* Add more space between the show more link and the Accepted file type. */
+body#page-local-qrsub-attempt .qtype_hybrid_builtin_answers {
+    margin-top: 40px;
+}
+
+/* Remove a bit of space between the paragraphe and the show more link */
+body#page-local-qrsub-attempt .que .qtext {
+    margin-bottom: 0.4em;
+}
+
+/* Collapse functionality */
+body#page-local-qrsub-attempt #question_desc.collapse:not(.show) {
+    position: relative;
+    display: block;
+    height: 3.2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+body#page-local-qrsub-attempt #question_desc.collapse:not(.show):before {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 1.5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+body#page-local-qrsub-attempt #question_desc.collapsing {
+    height: 3.2rem;
+}
+
+body#page-local-qrsub-attempt a#question_desc_link.collapsed::after {
+  content: '+ Show More';
+}
+
+body#page-local-qrsub-attempt a#question_desc_link:not(.collapsed)::after {
+  content: '- Show Less';
+}
+
+/* QRMOOD-46 */
+
+/******************************/
+/*   Attempt visuals mobile   */
+/******************************/
+body#page-local-qrsub-summary.mobiletheme::before,
+body#page-local-qrsub-attempt.mobiletheme::before {
+    background-image: url([[pix:theme|logo]]);
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    height: 100px;
+}
+
+body#page-local-qrsub-summary.mobiletheme #page,
+body#page-local-qrsub-attempt.mobiletheme #page {
+    margin-top: initial;
+}
+
+body#page-local-qrsub-summary.mobiletheme #page-navbar,
+body#page-local-qrsub-summary.mobiletheme .navbar,
+body#page-local-qrsub-attempt.mobiletheme #page-navbar,
+body#page-local-qrsub-attempt.mobiletheme .navbar {
+    display: none;
+}
+
+body#page-local-qrsub-summary.mobiletheme .page-context-header,
+body#page-local-qrsub-attempt.mobiletheme .page-context-header {
+    background: #fff;
+}
+
+body#page-local-qrsub-summary.mobiletheme h1,
+body#page-local-qrsub-attempt.mobiletheme h1 {
+    font-size: 1.6rem;
+    color: #912338;
+}
+
+body#page-local-qrsub-summary.mobiletheme h2,
+body#page-local-qrsub-attempt.mobiletheme h2 {
+    font-size: 1.4rem;
+    color: #912338;
+}
+
+body#page-local-qrsub-summary.mobiletheme h3,
+body#page-local-qrsub-attempt.mobiletheme h3 {
+    font-size: 1.2rem;
+    color: #912338;
+}
+
+body#page-local-qrsub-attempt.mobiletheme section#local_qrsub_navblock p {
+    margin-bottom: 0.5rem;
+}
+
+body#page-local-qrsub-attempt.mobiletheme .que.hybrid #additional-control {
+    display: none;
+}
+
+body#page-local-qrsub-attempt.mobiletheme .que.hybrid .qtype_hybrid_attachments_placeholders {
+    border-top: 1px solid #666;
+    margin-top: initial;
+    padding-top: 5px;
+}
+
+body#page-local-qrsub-attempt.mobiletheme div.attachments p:first-of-type,
+body#page-local-qrsub-summary.mobiletheme footer p:first-of-type,
+body#page-local-qrsub-attempt.mobiletheme footer p:first-of-type {
+    font-size: 1.1em;
+    font-family: "GillSansMTProBook", sans-serif;
+    font-weight: bold;
+    color: #912338;
+    margin-bottom: 0.5rem;
+}
+
+body#page-local-qrsub-summary.mobiletheme footer p strong,
+body#page-local-qrsub-attempt.mobiletheme footer p strong {
+    color: #912338;
+}
+
+body#page-local-qrsub-attempt.mobiletheme #question_desc_link {
+    color: #50368c;
+    font-weight: bold;
+}
+
+body#page-local-qrsub-summary.mobiletheme div.activity-navigation,
+body#page-local-qrsub-summary.mobiletheme section#mod_quiz_navblock {
+    display: none;
+}
+
+body#page-local-qrsub-summary.mobiletheme table.generaltable tbody tr td {
+    padding: .5rem .75rem;
+}
+
+body#page-local-qrsub-summary.mobiletheme table.generaltable tbody tr.complete td.lastcol,
+body#page-local-qrsub-summary.mobiletheme table.generaltable tbody tr.answersaved td.lastcol {
+    color: #357a32;
+}
+
+body#page-local-qrsub-summary.mobiletheme table.generaltable tbody tr.invalidanswer td.lastcol {
+    color: #ca3120;
+}
+
+body#page-local-qrsub-summary.mobiletheme table.generaltable tbody tr.unanswered td.lastcol {
+    color: #777;
+}
