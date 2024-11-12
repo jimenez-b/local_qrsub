@@ -672,7 +672,7 @@ class qrsub {
      */
     public static function get_uploaded_files_array($files, $qa, $output_renderer) {
 
-        $images = $indicators = $imagelinks = false;
+        $images = $indicators = $imagelinks = [];
 
         $i = 0;
         foreach ($files as $file) {
